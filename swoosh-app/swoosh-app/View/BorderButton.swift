@@ -15,5 +15,14 @@ class BorderButton: UIButton {
         layer.borderWidth = 2.0
         layer.borderColor = UIColor.white.cgColor
     }
-
+    
+    override var isEnabled: Bool {
+        didSet {
+            if isEnabled {
+                self.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4000330106)
+            } else {
+                self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.1457416373)
+            }
+        }
+    }
 }
